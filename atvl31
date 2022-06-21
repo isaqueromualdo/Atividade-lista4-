@@ -1,0 +1,55 @@
+/* Uma empresa concederá uma aumento de salário aos seus funcionários, variável de acordo com
+o cargo, conforme a tabla abaixo. Faça um algoritmo que leia o salário e o cargo de um funcionário
+e calcule o novo salário. Se o cargo do funcionário não estiver na tabela, ele deverá, receber 40%
+de aumento. Mostre o salário antigo , o novo salário e a diferença. */
+
+#include<math.h>
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+float salario, aumento, novosalario, diferencas;
+char cargo[15];
+
+    scanf("%f",&salario);
+    scanf("%s",cargo);
+
+    if (strcmp(cargo,"GERENTE") == 0){
+    aumento = 0.1 * salario;
+    novosalario = salario + aumento;
+    diferencas = novosalario - salario;
+        printf("ANTIGO SALARIO = %.2f\n",salario);
+        printf("NOVO SALARIO = %.2f\n",novosalario);
+        printf("DIFERENCA ENTRE SALARIOS = %.2f\n",diferencas);
+    }
+
+    else if (strcmp(cargo,"ENGENHEIRO") == 0){
+    aumento = 0.2 * salario;
+    novosalario = salario + aumento;
+    diferencas = novosalario - salario;
+        printf("ANTIGO SALARIO = %.2f\n",salario);
+        printf("NOVO SALARIO = %.2f\n",novosalario);
+        printf("DIFERENCA ENTRE SALARIOS = %.2f\n",diferencas);
+    }
+
+    else if (strcmp(cargo,"TECNICO") == 0){
+    aumento = 0.3 * salario;
+    novosalario = salario + aumento;
+    diferencas = novosalario - salario;
+        printf("ANTIGO SALARIO = %.2f\n",salario);
+        printf("NOVO SALARIO = %.2f\n",novosalario);
+        printf("DIFERENCA ENTRE SALARIOS = %.2f\n",diferencas);
+    }
+
+    else{
+    aumento = 0.4 * salario;
+    novosalario = salario + aumento;
+    diferencas = novosalario - salario;
+        printf("ANTIGO SALARIO = %.2f\n",salario);
+        printf("NOVO SALARIO = %.2f\n",novosalario);
+        printf("DIFERENCA ENTRE SALARIOS = %.2f\n",diferencas);
+}
+
+return 0;
+}
