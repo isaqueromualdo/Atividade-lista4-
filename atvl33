@@ -1,0 +1,46 @@
+/* Fazer um algoritmo que leia os dados de um usuário de telefonia de uma empresa
+de telecomunicações: bairro e número completo do telefone e verifique se o número do
+telefone (Exemplo: 2121212) está correto, ou seja, se o prefixo (3 primeiros dígitos) é
+correspondente ao bairro especificado. Sabendo-se que os prefixos existem nos bairros conforme a
+tabela abaixo: */
+
+#include<math.h>
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char bairro[15];
+int prefixo, n1, n2, n3 ,aux , compareprefixo;
+
+scanf("%s",bairro);
+scanf("%d",&prefixo);
+
+n1 = prefixo / 1000000;
+aux = prefixo % 1000000;
+n2 = aux / 100000;
+aux = aux % 100000;
+n3 = aux / 10000;
+compareprefixo = (n1 * 100) + ( n2 * 10 ) + n3;
+
+if ((strcmp(bairro,"OESTE") == 0 || strcmp(bairro,"VILA NOVA") == 0 || strcmp(bairro,"COIMBRA") == 0) && (compareprefixo == 223 || compareprefixo == 225 || compareprefixo ==212 || compareprefixo == 243)){
+
+printf("O TELEFONE ESTA CORRETO\n");
+}
+
+else if ((strcmp(bairro,"CENTRO") == 0 || strcmp(bairro,"UNIVERSITARIO") == 0 || strcmp(bairro,"SUL") == 0) && (compareprefixo == 223 || compareprefixo == 224 || compareprefixo == 215 || compareprefixo == 295)) {
+
+printf("O TELEFONE ESTA CORRETO\n");
+}
+
+  else if ((strcmp(bairro,"BUENO") == 0 || strcmp(bairro,"CAMPINAS") == 0 || strcmp(bairro,"LESTE") == 0 ) && (compareprefixo == 215 || compareprefixo == 212 || compareprefixo == 291 || compareprefixo == 268)){
+
+printf("O TELEFONE ESTA CORRETO\n");
+}
+
+else {
+printf("O TELEFONE ESTA INCORRETO\n");
+}
+
+return 0;
+}
