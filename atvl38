@@ -1,0 +1,33 @@
+/*A Distribuidora de Combustíveis Ave Maria ira dar um aumento em função da quantidade
+de combustível comprado anualmente por seus clientes. Os postos que consomem em média até
+50.000 litros de combustível ao mês, terão aumento de 20%. Os postos que consomem acima desta
+média, 12% de aumento. A distribuidora ira fornecer o nome do posto e seu consumo anual. Calcule
+e escreva qual será o preço do litro de combustível para o posto, levando-se em conta que hoje a
+distribuidora cobra
+R$1.63 por litro.*/
+
+#include<math.h>
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+int consumoanual;
+char nome[10];
+float valorlitro;
+
+scanf("%s",nome);
+scanf("%d",&consumoanual);
+
+if (consumoanual <= 50000){
+valorlitro = (0.2 * 1.63) + 1.63 ;
+printf("PRECO REAJUSTADO = %.2f\n",valorlitro);
+}
+
+else if (consumoanual > 50000){
+valorlitro = (0.12 * 1.63) + 1.63;
+printf("PRECO REAJUSTADO = %.2f\n",valorlitro);
+}
+
+return 0;
+}
