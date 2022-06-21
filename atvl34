@@ -1,0 +1,35 @@
+/*Fazer um algoritmo que receba a idade e o nome de um nadador e imprima o nome, a idade e
+a categoria do nadador seguindo as seguintes regras:*/
+
+#include<math.h>
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+int idade;
+char nome[20];
+
+    scanf("%d",&idade);
+    scanf("%s",nome);
+
+    if (idade >= 5 && idade <= 10){
+        printf("%s\n",nome);
+        printf("%d\n",idade);
+        printf("INFANTIL\n");
+    }
+    
+    else if (idade >= 11 && idade <= 17){
+        printf("%s\n",nome);
+        printf("%d\n",idade);
+        printf("JUVENIL\n");
+    }
+    
+    else if (idade >= 18 ){
+        printf("%s\n",nome);
+        printf("%d\n",idade);
+        printf("SENIOR\n");
+    }	
+
+return 0;
+}
