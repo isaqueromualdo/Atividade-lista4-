@@ -1,0 +1,58 @@
+/*Escrever um algoritmo que lê o número de identificação, as 3 notas obtidas por um aluno nas
+3 verificações e a média dos Exercícios que fazem parte da avaliação. Calcular a média
+de aproveitamento, usando a fórmula:*/
+
+#include<math.h>
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+int n_inscricao;
+float nota1, nota2, nota3, mediaexercicios, mediaaproveitamento;
+
+    scanf("%d",&n_inscricao);
+    scanf("%f",&mediaexercicios);
+    scanf("%f",&nota1);
+    scanf("%f",&nota2);
+    scanf("%f",&nota3);
+
+mediaaproveitamento = ((nota1 + (nota2 * 2 )) + (( nota3 * 3 ) + mediaexercicios )) / 7;
+
+    if (mediaaproveitamento >= 9.1 && mediaaproveitamento <= 10){
+        printf("NUMERO DE IDENTIFICACAO = %d\n",n_inscricao);
+        printf("MEDIA DOS EXERCICIOS = %.2f\n",mediaexercicios);
+        printf("MEDIA DE APROVEITAMENTO = %.2f\n",mediaaproveitamento);
+        printf("CONCEITO A, ALUNO APROVADO\n");
+    }
+
+    else if (mediaaproveitamento >= 7.6 && mediaaproveitamento <= 9){
+        printf("NUMERO DE IDENTIFICACAO = %d\n",n_inscricao);
+        printf("MEDIA DOS EXERCICIOS = %.2f\n",mediaexercicios);
+        printf("MEDIA DE APROVEITAMENTO = %.2f\n",mediaaproveitamento);
+        printf("CONCEITO B, ALUNO APROVADO\n");
+    }
+
+    else if (mediaaproveitamento >= 6.1 && mediaaproveitamento <= 7.5){
+        printf("NUMERO DE IDENTIFICACAO = %d\n",n_inscricao);
+        printf("MEDIA DOS EXERCICIOS = %.2f\n",mediaexercicios);
+        printf("MEDIA DE APROVEITAMENTO = %.2f\n",mediaaproveitamento);
+        printf("CONCEITO C, ALUNO APROVADO\n");
+    }
+
+    else if (mediaaproveitamento >= 4.1 && mediaaproveitamento <= 6.0){
+        printf("NUMERO DE IDENTIFICACAO = %d\n",n_inscricao);
+        printf("MEDIA DOS EXERCICIOS = %.2f\n",mediaexercicios);
+        printf("MEDIA DE APROVEITAMENTO = %.2f\n",mediaaproveitamento);
+        printf("CONCEITO D, ALUNO REPROVADO\n");
+    }
+
+    else if (mediaaproveitamento <= 4){
+        printf("NUMERO DE IDENTIFICACAO = %d\n",n_inscricao);
+        printf("MEDIA DOS EXERCICIOS = %.2f\n",mediaexercicios);
+        printf("MEDIA DE APROVEITAMENTO = %.2f\n",mediaaproveitamento);
+        printf("CONCEITO E, ALUNO REPROVADO\n");
+}
+
+return 0;
+}
