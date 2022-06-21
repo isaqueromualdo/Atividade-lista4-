@@ -1,0 +1,35 @@
+/*Elabore um algoritmo que leia o valor de dois números inteiros e a operação aritmética
+desejada. Calcule, então, a resposta adequada. Utilize os símbolos da tabela a seguir para ler qual
+operação aritmética escolhida.*/
+
+#include<math.h>
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+int codigo;
+float valorproduto, calculo;
+
+    scanf("%d",&codigo);
+    scanf("%f",&valorproduto);
+
+    if (codigo == 1){
+    calculo = valorproduto - (0.1 * valorproduto);
+    }
+
+    else if  (codigo == 2){
+    calculo = valorproduto - (0.05 * valorproduto);
+    }
+
+    else if  (codigo == 3){
+    calculo = valorproduto;
+    }
+
+    else if  (codigo == 4){
+    calculo = valorproduto + (0.1 * valorproduto);
+    }
+
+    printf("PRECO FINAL = %.2f\n",calculo);
+return 0;
+}
